@@ -1,0 +1,81 @@
+.person-names {
+
+}
+
+.person-first-name, .person-last-name {
+	display : inline;
+	
+	font-size : 2em;
+}
+
+.person-last-name {
+	text-transform : uppercase;
+}
+
+.person-birth, .person-death, #parents-wrapper, .merries-wrapper, .brothers-sisters-wrapper, .person-children-wrapper {
+	margin-top : 1em;
+}
+
+.person-birth-date, .person-death-date {
+	font-size : 1.7em;
+	font-style : italic;
+}
+
+.person-birth-history {
+	font-size : 1.5em;
+}
+
+.person-death-history {
+	font-size : 1.5em;
+}
+
+.merries-static-text, .person-parents-static-text, .person-brothers-sisters-static-text, .main-info-static-text {
+	font-size : 1.7em;
+	font-style : italic;
+	text-decoration : underline;
+}
+
+.person-merries, .person-brothers-sisters-list, .person-children-list {
+	margin : 0;
+}
+
+.person-merry {
+	list-style-image : url(../imgs/merry-symbol-small.png);
+}
+
+.person-ex-merry {
+	list-style-image : url(../imgs/ex-merry-symbol-small.png);
+}
+
+.person-couple {
+	font-size : 1.5em;
+}
+
+.merry-divorce-dates {
+	font-size : 1.2em;
+	font-style : italic;
+}
+
+.no-display {
+	display : none;
+}
+
+.person-father, .person-mother {
+	text-indent : 1.5em;
+	font-size : 1.3em;
+}
+
+.person-children-static-text {
+	font-size : 1.3em;
+	font-style : italic;
+	text-decoration : underline;
+}
+
+.person-brothers-sisters-list-item {
+	font-size : 1.2em;
+}
+
+.person-children-list-item {
+	font-size : 1.3em;
+	list-style : disc;
+}

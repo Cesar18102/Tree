@@ -1,0 +1,160 @@
+.person {
+	width : 30em;
+	height : 8em;
+	
+	border : 0.2em solid #A0A0A0;
+	border-radius : 1vh;
+	
+	position : absolute;
+}
+
+.person:hover {
+	cursor : pointer;
+	background-color : #EEEEEE;
+}
+
+.person-photo {
+	width : 8em;
+	height : 8em;
+	cursor : pointer;
+	
+	background-size : cover;
+	background-position : center;
+	background-repeat : no-repeat;
+	
+	border-top-left-radius : calc(1vh - 0.2em);
+	border-bottom-left-radius : calc(1vh - 0.2em);
+}
+
+.person-info {
+	width : 19em;
+	height : 8em;
+	
+	border-top-right-radius : calc(1vh - 0.2em);
+	border-bottom-right-radius : calc(1vh - 0.2em);
+	
+	padding-left : 0.4em;
+	padding-right : 0.4em;
+}
+
+.person-buttons {
+	width : 2em;
+	height : 8em;
+}
+
+.person-button {
+	width : 1.95em;
+	height : 1.95em;
+	
+	vertical-align : middle;
+	
+	border-top : 0.05em solid #A0A0A0;
+	border-left : 0.05em solid #A0A0A0;
+	
+	background-size : cover;
+	background-position : center;
+	background-repeat : no-repeat;
+}
+
+.top-person-button {
+	height : 2em;
+	border-top : 0;
+	border-top-right-radius : calc(1vh - 0.2em);
+}
+
+.bottom-person-button {
+	border-bottom-right-radius : calc(1vh - 0.2em);
+}
+
+.main-info-button {
+	background-image : url(../imgs/parents-button.jpg);
+}
+
+.parents-button {
+	background-image : url(../imgs/parents-button.jpg);
+}
+
+.brothers-sisters-button {
+	background-image : url(../imgs/parents-button.jpg);
+}
+
+.merries-button {
+	background-image : url(../imgs/parents-button.jpg);
+}
+
+.horisontal-person-info-separator {
+	width : 19em;
+	height : 0.05em;
+	
+	background-color : #A0A0A0;
+}
+
+.merry-symbol, .ex-merry-symbol, .h-line, .v-line {
+	position : absolute;
+}
+
+.merry-symbol {	
+	background-image : url(../imgs/merry-symbol.png);
+	
+	background-size : cover;
+	background-position : center;
+	background-repeat : no-repeat;
+}
+
+.ex-merry-symbol {
+	background-image : url(../imgs/ex-merry-symbol.png);
+	
+	background-size : cover;
+	background-position : center;
+	background-repeat : no-repeat;
+}
+
+.h-line, .v-line {
+	background-color : #A0A0A0;
+}
+
+.h-line {
+	height : 0.1em;
+}
+
+.v-line {
+	width : 0.1em;
+}
+
+.person-names {
+	
+}
+
+.person-first-name {
+	display : inline;
+	
+	font-size : 1.1em;
+}
+
+.person-last-name {
+	display : inline;
+	
+	font-size : 1.1em;
+	font-weight : bold;
+	text-transform : uppercase;
+}
+
+.person-dates {
+	
+}
+
+.person-birth-date {
+	display : inline;
+}
+
+.person-death-date {
+	display : inline;
+}
+
+.birth-history {
+	font-style : italic;
+}
+
+.death-history {
+	font-style : italic;
+}

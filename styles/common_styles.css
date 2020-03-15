@@ -1,0 +1,66 @@
+body { overflow : hidden }
+
+html, body, #tree-info-wrapper, #tree-info-row {
+	margin : 0;
+	padding : 0;
+	
+	width : 100%;
+	height : 100%;
+}
+
+.tree-info-cell {
+	height : 100%;
+}
+
+#tree-wrapper, #info-wrapper {
+	height : 100%;
+}
+
+#tree-wrapper {
+	width : 80vw;
+	border : 0;
+}
+
+#info-wrapper {
+	width : 20vw;
+	padding : 1vw;
+	overflow : scroll;
+	border-left : 0.2em solid #A0A0A0;
+	background-color : #EEEEEE;
+}
+
+.popup-wrapper {
+	width : 100%;
+	height : 100%;
+	
+	top : 0;
+	left : 0;
+	
+	position : fixed;
+	background-color : #50505050; 
+}
+
+.popup-body {
+	width : 30%;
+	height : 30%;
+	
+	position : relative;
+	
+	top : 35%;
+	left : 35%;
+	
+	border : 0.2vh solid #A0A0A0;
+	border-radius : 2vh;
+	background-color : #EEEEEE;
+}
+
+.popup-info-wrapper {
+	height : 90%;
+	margin-top : 3%;
+	overflow-y: scroll;
+}
+
+.popup-info {
+	height : 100%;
+	vertical-align : middle;
+}
