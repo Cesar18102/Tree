@@ -125,16 +125,20 @@
 	
 }
 
-.person-first-name {
+.person-first-name, .person-christening-name, .person-last-name {
 	display : inline;
-	
 	font-size : 1.1em;
 }
 
-.person-last-name {
-	display : inline;
+.person-first-name {
 	
-	font-size : 1.1em;
+}
+
+.person-christening-name {
+	font-style : italic;
+}
+
+.person-last-name {
 	font-weight : bold;
 	text-transform : uppercase;
 }
@@ -143,11 +147,7 @@
 	
 }
 
-.person-birth-date {
-	display : inline;
-}
-
-.person-death-date {
+.person-birth-date, .person-death-date, .person-age {
 	display : inline;
 }
 

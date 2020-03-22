@@ -1,158 +1,1861 @@
-let testGrandChildPerson2 = {
-	id : 6,
-	first_name : "Анна",
-	last_name : "Стародубцева",
-	birth_date : "14.05.2021",
-	death_date : null,
-	birth_history : "Lorem ispum birth",
-	death_history : null,
-	photo_url : null,
-	sex : "woman",
-	merries : []
+let person_22 = {
+
+	 id : 22,                           //идентификатор
+	 first_name : `Григорий`,                   //имя
+	 christening_name : `Григорий`,             //имярек
+	 last_name : `Григорий`,                    //фамилия
+	 birth_date : `10.10.1936`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `83`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
 };
 
-let testGrandChildPerson = {
-	id : 5,
-	first_name : "Алексей",
-	last_name : "Стародубцев-Восьмиглазов",
-	birth_date : "14.05.2020",
-	death_date : null,
-	birth_history : "Lorem ispum birth",
-	death_history : null,
-	photo_url : null,
-	sex : "man",
-	merries : []
+ 
+ 
+
+let person_21 = {
+
+	 id : 21,                           //идентификатор
+	 first_name : `Дед Литвин`,                   //имя
+	 christening_name : `Дед Литвин`,             //имярек
+	 last_name : `Дед Литвин`,                    //фамилия
+	 birth_date : `16.05.1911`,                   //дата рождения
+	 death_date : `03.01.1972`,                   //дата смерти
+	 age : `61`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
 };
 
-let testChildPerson = {
-	id : 2,
-	first_name : "Андрей",
-	last_name : "Стародубцев",
-	birth_date : "14.05.2000",
-	death_date : null,
-	birth_history : "Lorem ispum birth",
-	death_history : null,
-	photo_url : null,
-	sex : "man",
-	merries : []
+ 
+ 
+
+let person_25 = {
+
+	 id : 25,                           //идентификатор
+	 first_name : `Таня Литв`,                   //имя
+	 christening_name : `Татьяна`,             //имярек
+	 last_name : `Таня Литв`,                    //фамилия
+	 birth_date : `15.06.1983`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `36`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : null,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
 };
 
-let testChildPerson3 = {
-	id : 7,
-	first_name : "Иван",
-	last_name : "Стародубцев",
-	birth_date : "14.05.2005",
-	death_date : null,
-	birth_history : "Lorem ispum birth",
-	death_history : null,
-	photo_url : null,
-	sex : "man",
-	merries : []
+ 
+ 
+
+let person_23 = {
+
+	 id : 23,                           //идентификатор
+	 first_name : `Надежда`,                   //имя
+	 christening_name : `Надежда`,             //имярек
+	 last_name : `Надежда`,                    //фамилия
+	 birth_date : `19.12.1938`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `81`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
 };
 
-let testDivorceChild = {
-	id : 4,
-	first_name : "Василий",
-	last_name : "Стародубцев-Восьмиглазов",
-	birth_date : "14.05.1995",
-	death_date : null,
-	birth_history : "Lorem ispum birth",
-	death_history : null,
-	photo_url : null,
-	sex : "man",
-	merries : []
+ 
+ 
+
+let person_4 = {
+
+	 id : 4,                           //идентификатор
+	 first_name : `Михаил`,                   //имя
+	 christening_name : `Міхаїл`,             //имярек
+	 last_name : `Михаил`,                    //фамилия
+	 birth_date : `10.03.2019`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `1`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `не крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
 };
 
-let testChildPerson2 = {
-	id : 3,
-	first_name : "Марина",
-	last_name : "Алексеева",
-	birth_date : "14.05.2001",
-	death_date : null,
-	birth_history : "Lorem ispum birth",
-	death_history : null,
-	photo_url : null,
-	sex : "woman",
-	merries : [/*{
-		id : 0,
-		couple : testDivorceChild,
-		merry_date : "08.09.2020",
-		divorce_date : null,
-		children : [
-			testGrandChildPerson2
-		]
-	}*/]
+ 
+ 
+
+let person_2 = {
+
+	 id : 2,                           //идентификатор
+	 first_name : `Дмитрий`,                   //имя
+	 christening_name : `Димитрий`,             //имярек
+	 last_name : `Дмитрий`,                    //фамилия
+	 birth_date : `15.04.2009`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `10`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : `оккультист`,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
 };
 
-let testMerryPerson = {
-	id : 1,
-	first_name : "Валентин",
-	last_name : "Стародубцев",
-	birth_date : "14.05.1975",
-	death_date : "20.05.2041",
-	birth_history : "Lorem ispum birth",
-	death_history : "Dolor sit amet death",
-	photo_url : null,
-	sex : "man",
-	parent1 : null,
-	parent2 : null,
-	merries : []
+ 
+ 
+
+let person_3 = {
+
+	 id : 3,                           //идентификатор
+	 first_name : `Иоанна`,                   //имя
+	 christening_name : `Иоанна`,             //имярек
+	 last_name : `Иоанна`,                    //фамилия
+	 birth_date : `01.09.2006`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `13`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : `богоотступница|оккультистка`,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_5 = {
+
+	 id : 5,                           //идентификатор
+	 first_name : `Екатерина`,                   //имя
+	 christening_name : `Катрин`,             //имярек
+	 last_name : `Екатерина`,                    //фамилия
+	 birth_date : `16.01.1999`,                   //дата рождения
+	 death_date : null,                   //дата смерти
+	 age : `21`,                          //возраст
+	 birth_history : `<p>Рождение сложное, врач-акушер чуть не упустил младенца, протыкали копьем и наделали множественные раны в голове.</p>
+
+<p>C тех пор голова покрыта красными родинками-отростками, похожими на бородавки.</p>`,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : `Украина`,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : `богоотступница|оккультистка|ведьма`,                 //особые отметки на человеке 
+	 ability : `<p><strong>Интеллектуалка</strong></p>`,                      //таланты 
+	 common : `1`,                       //дополнительная информация 
+	 specials : `[16.01.1999][событие 1]|[17.01.1999][событие 3]|[11.02.2020][событие 4]`,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_6 = {
+
+	 id : 6,                           //идентификатор
+	 first_name : `Анна`,                   //имя
+	 christening_name : `Анна`,             //имярек
+	 last_name : `Анна`,                    //фамилия
+	 birth_date : `17.04.1988`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `31`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : `богоотступница|оккультистка`,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_1 = {
+
+	 id : 1,                           //идентификатор
+	 first_name : `Александр`,                   //имя
+	 christening_name : `Александр`,             //имярек
+	 last_name : `Александр`,                    //фамилия
+	 birth_date : `08.02.1982`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `38`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : `богоотступник|сектант|оккультист`,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_17 = {
+
+	 id : 17,                           //идентификатор
+	 first_name : `Александр Коб`,                   //имя
+	 christening_name : `Александр`,             //имярек
+	 last_name : `Александр Коб`,                    //фамилия
+	 birth_date : `12.06.1965`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `54`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_18 = {
+
+	 id : 18,                           //идентификатор
+	 first_name : `Ирина Бел`,                   //имя
+	 christening_name : `Ирина`,             //имярек
+	 last_name : `Ирина Бел`,                    //фамилия
+	 birth_date : `11.03.1965`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `55`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_19 = {
+
+	 id : 19,                           //идентификатор
+	 first_name : `Николай б`,                   //имя
+	 christening_name : `Никоалй`,             //имярек
+	 last_name : `Николай б`,                    //фамилия
+	 birth_date : `24.10.1960`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `59`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_20 = {
+
+	 id : 20,                           //идентификатор
+	 first_name : `Георгий Бел`,                   //имя
+	 christening_name : `Георгий`,             //имярек
+	 last_name : `Георгий Бел`,                    //фамилия
+	 birth_date : `19.02.1960`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `60`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : null,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_8 = {
+
+	 id : 8,                           //идентификатор
+	 first_name : `Любовь`,                   //имя
+	 christening_name : `Любовь`,             //имярек
+	 last_name : `Любовь`,                    //фамилия
+	 birth_date : `10.04.1958`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `61`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_7 = {
+
+	 id : 7,                           //идентификатор
+	 first_name : `Сергей`,                   //имя
+	 christening_name : `Сергий`,             //имярек
+	 last_name : `Сергей`,                    //фамилия
+	 birth_date : `07.05.1957`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `62`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_16 = {
+
+	 id : 16,                           //идентификатор
+	 first_name : `Вера`,                   //имя
+	 christening_name : `Вера`,             //имярек
+	 last_name : `Вера`,                    //фамилия
+	 birth_date : `10.10.1956`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `63`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_13 = {
+
+	 id : 13,                           //идентификатор
+	 first_name : `Анфиса`,                   //имя
+	 christening_name : `Анфиса`,             //имярек
+	 last_name : `Анфиса`,                    //фамилия
+	 birth_date : `25.12.1934`,                   //дата рождения
+	 death_date : `19.05.2008`,                   //дата смерти
+	 age : `74`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_9 = {
+
+	 id : 9,                           //идентификатор
+	 first_name : `Валентина`,                   //имя
+	 christening_name : `Валентина`,             //имярек
+	 last_name : `Валентина`,                    //фамилия
+	 birth_date : `17.09.1933`,                   //дата рождения
+	 death_date : `31.12.9999`,                   //дата смерти
+	 age : `86`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_10 = {
+
+	 id : 10,                           //идентификатор
+	 first_name : `Василий`,                   //имя
+	 christening_name : `Василий`,             //имярек
+	 last_name : `Василий`,                    //фамилия
+	 birth_date : `01.01.1933`,                   //дата рождения
+	 death_date : `16.09.1979`,                   //дата смерти
+	 age : `46`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : `<p>Пришел домой после бани, где выпивали, сколько не известно. Дома прилег подремать. Во сне умер.</p>`,                //история смерти
+	 death_cause : `Инсульт`,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : null,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_15 = {
+
+	 id : 15,                           //идентификатор
+	 first_name : `Сергей Коб`,                   //имя
+	 christening_name : `Сергий`,             //имярек
+	 last_name : `Сергей Коб`,                    //фамилия
+	 birth_date : `24.06.1932`,                   //дата рождения
+	 death_date : `11.07.1995`,                   //дата смерти
+	 age : `63`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_26 = {
+
+	 id : 26,                           //идентификатор
+	 first_name : `Валентина Гавриловна`,                   //имя
+	 christening_name : null,             //имярек
+	 last_name : `Валентина Гавриловна`,                    //фамилия
+	 birth_date : null,                   //дата рождения
+	 death_date : null,                   //дата смерти
+	 age : `0`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : null,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_27 = {
+
+	 id : 27,                           //идентификатор
+	 first_name : `Юрий Муж Гавриловны`,                   //имя
+	 christening_name : null,             //имярек
+	 last_name : `Юрий Муж Гавриловны`,                    //фамилия
+	 birth_date : null,                   //дата рождения
+	 death_date : null,                   //дата смерти
+	 age : `0`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : null,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_12 = {
+
+	 id : 12,                           //идентификатор
+	 first_name : `Ольга`,                   //имя
+	 christening_name : `Ольга`,             //имярек
+	 last_name : `Ольга`,                    //фамилия
+	 birth_date : `23.03.1915`,                   //дата рождения
+	 death_date : `07.04.1996`,                   //дата смерти
+	 age : `81`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_11 = {
+
+	 id : 11,                           //идентификатор
+	 first_name : `Николай`,                   //имя
+	 christening_name : `Николай`,             //имярек
+	 last_name : `Николай`,                    //фамилия
+	 birth_date : `17.09.1914`,                   //дата рождения
+	 death_date : `18.09.1986`,                   //дата смерти
+	 age : `72`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_24 = {
+
+	 id : 24,                           //идентификатор
+	 first_name : `Дуня`,                   //имя
+	 christening_name : `Анастасия`,             //имярек
+	 last_name : `Дуня`,                    //фамилия
+	 birth_date : `15.10.1906`,                   //дата рождения
+	 death_date : `03.08.1970`,                   //дата смерти
+	 age : `64`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : null,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+ 
+ 
+
+let person_14 = {
+
+	 id : 14,                           //идентификатор
+	 first_name : `Кузьма`,                   //имя
+	 christening_name : `Кузьма`,             //имярек
+	 last_name : `Кузьма`,                    //фамилия
+	 birth_date : `21.10.1905`,                   //дата рождения
+	 death_date : `21.10.1943`,                   //дата смерти
+	 age : `38`,                          //возраст
+	 birth_history : null,                //история рождения
+	 death_history : null,                //история смерти
+	 death_cause : null,                  //причина смерти
+	 country_birh : null,                 //страна рождения
+	 relocation : null,                   //смена мест проживания
+	 positions_held : null,               //история трудовой деятельности
+	 accidents : null,                    //история несчастных случаев
+	 chronica_ilments : null,             //перечень хронических заболеваний
+	 character_traits : null,             //черты характера 
+	 vices : null,                        //пагубные привычки, зависимости 
+	 sin : null,                          //судимости, преступления 
+	 christening : `крещен`,                  //крещен ли. может принимать значения 'крещен', 'не крещен' все символы в нижнем регистре 
+	 person_marks : null,                 //особые отметки на человеке 
+	 ability : null,                      //таланты 
+	 common : null,                       //дополнительная информация 
+	 specials : null,                     //особые даты и события. может принимать значения  в виде '[дата1][описание1]|[дата2][описание2]' 
+	 attitude_to_parent_1 : null,         //описание взаимоотношений данной персоны к отцу 
+	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
+	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
+	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
+	 photo_url : null,
+	 sex : `woman`,
+	 parent1 : null,
+	 parent2 : null,
+	 merries : []
+};
+
+let ROOT_PERSON = person_14;
+
+ function parent() {
+
+
+
+  	 person_4.parent1 = person_1;
+
+  	 person_4.parent2 = person_5;
+
+
+
+  	 person_2.parent1 = person_1;
+
+  	 person_2.parent2 = person_6;
+
+
+
+  	 person_3.parent1 = person_1;
+
+  	 person_3.parent2 = person_6;
+
+
+
+  	 person_5.parent1 = person_20;
+
+  	 person_5.parent2 = person_18;
+
+
+
+  	 person_6.parent1 = null;
+
+  	 person_6.parent2 = null;
+
+
+
+  	 person_25.parent1 = person_22;
+
+  	 person_25.parent2 = null;
+
+
+
+  	 person_1.parent1 = person_7;
+
+  	 person_1.parent2 = person_8;
+
+
+
+  	 person_17.parent1 = person_15;
+
+  	 person_17.parent2 = person_13;
+
+
+
+  	 person_18.parent1 = person_27;
+
+  	 person_18.parent2 = person_26;
+
+
+
+  	 person_19.parent1 = person_10;
+
+  	 person_19.parent2 = person_9;
+
+
+
+  	 person_20.parent1 = null;
+
+  	 person_20.parent2 = null;
+
+
+
+  	 person_8.parent1 = person_15;
+
+  	 person_8.parent2 = person_13;
+
+
+
+  	 person_7.parent1 = person_10;
+
+  	 person_7.parent2 = person_9;
+
+
+
+  	 person_16.parent1 = person_15;
+
+  	 person_16.parent2 = person_13;
+
+
+
+  	 person_23.parent1 = person_21;
+
+  	 person_23.parent2 = person_12;
+
+
+
+  	 person_22.parent1 = person_21;
+
+  	 person_22.parent2 = person_12;
+
+
+
+  	 person_13.parent1 = person_14;
+
+  	 person_13.parent2 = person_24;
+
+
+
+  	 person_9.parent1 = person_11;
+
+  	 person_9.parent2 = person_12;
+
+
+
+  	 person_10.parent1 = null;
+
+  	 person_10.parent2 = null;
+
+
+
+  	 person_15.parent1 = null;
+
+  	 person_15.parent2 = null;
+
+
+
+  	 person_12.parent1 = null;
+
+  	 person_12.parent2 = null;
+
+
+
+  	 person_11.parent1 = null;
+
+  	 person_11.parent2 = null;
+
+
+
+  	 person_21.parent1 = null;
+
+  	 person_21.parent2 = null;
+
+
+
+  	 person_24.parent1 = null;
+
+  	 person_24.parent2 = null;
+
+
+
+  	 person_14.parent1 = null;
+
+  	 person_14.parent2 = null;
+
+
+
+  	 person_26.parent1 = null;
+
+  	 person_26.parent2 = null;
+
+
+
+  	 person_27.parent1 = null;
+
+  	 person_27.parent2 = null;
+
+ }
+
+
+
+
+
+ function letpeople() {
+
+ 	 let people = [ 
+
+ 	 	 person_4,
+
+ 	 	 person_2,
+
+ 	 	 person_3,
+
+ 	 	 person_5,
+
+ 	 	 person_6,
+
+ 	 	 person_25,
+
+ 	 	 person_1,
+
+ 	 	 person_17,
+
+ 	 	 person_18,
+
+ 	 	 person_19,
+
+ 	 	 person_20,
+
+ 	 	 person_8,
+
+ 	 	 person_7,
+
+ 	 	 person_16,
+
+ 	 	 person_23,
+
+ 	 	 person_22,
+
+ 	 	 person_13,
+
+ 	 	 person_9,
+
+ 	 	 person_10,
+
+ 	 	 person_15,
+
+ 	 	 person_12,
+
+ 	 	 person_11,
+
+ 	 	 person_21,
+
+ 	 	 person_24,
+
+ 	 	 person_14,
+
+ 	 	 person_26,
+
+ 	 	 person_27
+
+ 	 	 ];
+
+ 	 	 return people;
+
+ }
+
+
+
+
+
+ function init() {
+
 }
 
-let testDivorcePerson = {
-	id : 1,								    //идентификатор человека
-	first_name : "Татьяна",
-	last_name : "Восьмиглазова",
-	birth_date : "14.05.1970", 
-	death_date : "20.05.2041", 			 	//по умолчанию ставить null 
-	birth_history : "Lorem ispum birth", 
-	death_history : "Dolor sit amet death", //по умолчанию ставить null 
-	photo_url : null,				 //если null, картинка определяется полем sex
-	sex : "woman", 					 //man или woman
-	parent1 : null,					 //родители
-	parent2 : null,
-	merries : [{ 					 //каждый объект брака должен присутствовать у обоих супругов
-		id : 1,  					 //id брака должен совпадать у супругов, заключивших этот брак
-		couple : testMerryPerson,    //супруг(а)
-		merry_date : "08.08.1995",   //дата бракосочетания
-		divorce_date : "08.08.2001", //дата развода, по умолчанию ставить null
-		children : [ 				 //дети, родившиеся в браке
-			testDivorceChild,
-			testGrandChildPerson
-		]
-	}, null //последний брак в списке - нынешний, активный. То есть если человек развелся, но потом не женился,
-	]	 	//надо поставить в конце списка null
-}			//браки должны быть расставлены в хронологической последовательности
 
-let testRootPerson = {
-	id : 0,
-	first_name : "Оксана",
-	last_name : "Стародубцева",
-	birth_date : "14.05.1975",
-	death_date : "20.05.2040",
-	birth_history : "Lorem ispum birth Lorem ispum birth Lorem ispum birth",
-	death_history : "Dolor sit amet death Dolor sit amet death Dolor sit amet death",
-	photo_url : null,
-	sex : "woman",
-	parent1 : null,
-	parent2 : null,
-	merries : [{
-		id : 2,
-		couple : testMerryPerson, 
-		merry_date : "08.08.2005",
-		divorce_date : null,
-		children : [
-			testChildPerson2,
-			testChildPerson,
-			testChildPerson3
-		]
-	}]
-};
 
-const horisontalSpace = 10;  //расстояние между людьми по горизонтали
+
+
+ function pushmerries() {
+
+ 	 person_5.merries.push(
+
+ 	 	 {
+
+  	 	 id : 6,
+
+  	 	 couple : person_1,
+
+  	 	 merry_date : `18.08.2018`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_4
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_6.merries.push(
+
+ 	 	 {
+
+  	 	 id : 2,
+
+  	 	 couple : person_1,
+
+  	 	 merry_date : `25.07.2006`,
+
+  	 	 divorce_date : `28.02.2017`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_2,
+
+ 	 	 	 person_3
+
+ 	 	 	 ]
+
+ 	 	 }
+
+ 	 	 , null
+	 );
+
+ 	 person_1.merries.push(
+
+ 	 	 {
+
+  	 	 id : 2,
+
+  	 	 couple : person_6,
+
+  	 	 merry_date : `25.07.2006`,
+
+  	 	 divorce_date : `28.02.2017`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_2,
+
+ 	 	 	 person_3
+
+ 	 	 	 ]
+
+ 	 	 },
+
+ 	 	 {
+
+  	 	 id : 6,
+
+  	 	 couple : person_5,
+
+  	 	 merry_date : `18.08.2018`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_4
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_18.merries.push(
+
+ 	 	 {
+
+  	 	 id : 12,
+
+  	 	 couple : person_20,
+
+  	 	 merry_date : `07.04.1997`,
+
+  	 	 divorce_date : `21.08.2013`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_5
+
+ 	 	 	 ]
+
+ 	 	 }
+
+ 	 	 , null
+	 );
+
+ 	 person_20.merries.push(
+
+ 	 	 {
+
+  	 	 id : 12,
+
+  	 	 couple : person_18,
+
+  	 	 merry_date : `07.04.1997`,
+
+  	 	 divorce_date : `21.08.2013`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_5
+
+ 	 	 	 ]
+
+ 	 	 }
+
+ 	 	 , null
+	 );
+
+ 	 person_8.merries.push(
+
+ 	 	 {
+
+  	 	 id : 7,
+
+  	 	 couple : person_7,
+
+  	 	 merry_date : `07.03.1981`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_1
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_7.merries.push(
+
+ 	 	 {
+
+  	 	 id : 7,
+
+  	 	 couple : person_8,
+
+  	 	 merry_date : `07.03.1981`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_1
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_22.merries.push(
+
+ 	 	 {
+
+  	 	 id : -1708894,
+
+  	 	 couple : null,
+
+  	 	 merry_date : null,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 1, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_25
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_13.merries.push(
+
+ 	 	 {
+
+  	 	 id : 11,
+
+  	 	 couple : person_15,
+
+  	 	 merry_date : `18.07.1953`,
+
+  	 	 divorce_date : `28.10.1974`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_17,
+
+ 	 	 	 person_8,
+
+ 	 	 	 person_16
+
+ 	 	 	 ]
+
+ 	 	 }
+
+ 	 	 , null
+	 );
+
+ 	 person_9.merries.push(
+
+ 	 	 {
+
+  	 	 id : 8,
+
+  	 	 couple : person_10,
+
+  	 	 merry_date : `01.01.1956`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_19,
+
+ 	 	 	 person_7
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_10.merries.push(
+
+ 	 	 {
+
+  	 	 id : 8,
+
+  	 	 couple : person_9,
+
+  	 	 merry_date : `01.01.1956`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_19,
+
+ 	 	 	 person_7
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_15.merries.push(
+
+ 	 	 {
+
+  	 	 id : 11,
+
+  	 	 couple : person_13,
+
+  	 	 merry_date : `18.07.1953`,
+
+  	 	 divorce_date : `28.10.1974`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_17,
+
+ 	 	 	 person_8,
+
+ 	 	 	 person_16
+
+ 	 	 	 ]
+
+ 	 	 }
+
+ 	 	 , null
+	 );
+
+ 	 person_12.merries.push(
+
+ 	 	 {
+
+  	 	 id : 10,
+
+  	 	 couple : person_11,
+
+  	 	 merry_date : `11.02.1933`,
+
+  	 	 divorce_date : `27.06.1934`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_9
+
+ 	 	 	 ]
+
+ 	 	 },
+
+ 	 	 {
+
+  	 	 id : 9,
+
+  	 	 couple : person_21,
+
+  	 	 merry_date : `07.08.1936`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_23,
+
+ 	 	 	 person_22
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_11.merries.push(
+
+ 	 	 {
+
+  	 	 id : 10,
+
+  	 	 couple : person_12,
+
+  	 	 merry_date : `11.02.1933`,
+
+  	 	 divorce_date : `27.06.1934`,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_9
+
+ 	 	 	 ]
+
+ 	 	 }
+
+ 	 	 , null
+	 );
+
+ 	 person_21.merries.push(
+
+ 	 	 {
+
+  	 	 id : 9,
+
+  	 	 couple : person_12,
+
+  	 	 merry_date : `07.08.1936`,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 0, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_23,
+
+ 	 	 	 person_22
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_24.merries.push(
+
+ 	 	 {
+
+  	 	 id : -1708894,
+
+  	 	 couple : person_14,
+
+  	 	 merry_date : null,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 1, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_13
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_14.merries.push(
+
+ 	 	 {
+
+  	 	 id : -1708894,
+
+  	 	 couple : person_24,
+
+  	 	 merry_date : null,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 1, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_13
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_26.merries.push(
+
+ 	 	 {
+
+  	 	 id : -1708894,
+
+  	 	 couple : person_27,
+
+  	 	 merry_date : null,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 1, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_18
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+ 	 person_27.merries.push(
+
+ 	 	 {
+
+  	 	 id : -1708894,
+
+  	 	 couple : person_26,
+
+  	 	 merry_date : null,
+
+  	 	 divorce_date : null,
+
+  	 	 venchan_li_brak : null,
+
+  	 	 fiktivnyj_brak : 1, //если фиктивный брак, то ставим 1
+
+  	 	 children : [
+
+ 	 	 	 person_18
+
+ 	 	 	 ]
+
+ 	 	 }
+	 );
+
+}
+const horisontalSpace = 6;  //расстояние между людьми по горизонтали
 const verticalSpace = 6;     //расстояние между людьми по вертикали
 	
-const horisontalIndent = 12; //отступ дерева от левого края
+const horisontalIndent = 8; //отступ дерева от левого края
 const verticalIndent = 0;    //отступ дерева от верхнего края
 	
 const personHeight = 8;		 //высота болка человека (должна соответствовать .person.height в tree_styles.css!!! и сумме .person-photo.width + .person-info.width + .person-buttons.width + 1(for borders))
@@ -176,89 +1879,25 @@ let personButtons = {
 
 function init() {
 	
-	testMerryPerson.merries.push({
-		id : 1,
-		couple : testDivorcePerson,
-		merry_date : "08.08.1995",
-		divorce_date : "08.08.2001",
-		children : [
-			testDivorceChild,
-			testGrandChildPerson
-		]
-	}, {
-		id : 2,
-		couple : testRootPerson,
-		merry_date : "08.08.2005",
-		divorce_date : null,
-		children : [
-			testChildPerson2,
-			testChildPerson,
-			testChildPerson3
-		]
-	});
+	pushmerries();//Добавить браки
+	parent();//Добавить предков
+	let people = letpeople();//Cписок всх людей
 	
-	/*testDivorceChild.merries.push({
-		id : 0,
-		couple : testChildPerson2,
-		merry_date : "08.09.2020",
-		divorce_date : null,
-		children : [
-			testGrandChildPerson2
-		]
-	});*/
+	//people.sort((a, b) => Math.random() > 0.5 ? 1 : -1); //рандомная сортировка - для проверки на баги в правильной сортировки людей
 	
-	//Добавить браки, которые не могли быть добавлены при инициализации
-	
-	testGrandChildPerson2.parent1 = testChildPerson2;
-	testGrandChildPerson2.parent2 = testGrandChildPerson;
-	
-	testDivorceChild.parent1 = testDivorcePerson;
-	testDivorceChild.parent2 = testMerryPerson;
-	
-	testGrandChildPerson.parent1 = testDivorcePerson;
-	testGrandChildPerson.parent2 = testMerryPerson;
-	
-	testChildPerson2.parent1 = testRootPerson;
-	testChildPerson2.parent2 = testMerryPerson;
-	
-	testChildPerson.parent1 = testRootPerson;
-	testChildPerson.parent2 = testMerryPerson;
-	
-	testChildPerson3.parent1 = testRootPerson;
-	testChildPerson3.parent2 = testMerryPerson;
-	
-	//Добавить предков, которые не могли быть добавлены при инициализации
-	
-	//Положить сюда список всх людей
-	let people = [ 
-		testDivorcePerson, 
-		testMerryPerson, 
-		testRootPerson, 
-		testDivorceChild, 
-		testGrandChildPerson, 
-		testChildPerson2, 
-		testChildPerson, 
-		testGrandChildPerson2,
-		testChildPerson3
-	];
-	
-	people.sort((a, b) => Math.random() > 0.5 ? 1 : -1);
-	
-	//Передать сюда одного из корневых предков (testRootPerson)
-	let sizes = getTreeSize(testRootPerson, people);
+	//Передать сюда одного из корневых предков (ROOT_PERSON)
+	let sizes = getTreeSize(ROOT_PERSON, people);
 	let sortedPeople = sortPeople(sizes);
 	
 	let tree = document.getElementById("tree");	
-	let selectedPersonView = null;
+	let selectedPerson = null;
 	
 	locatePersonViews(sortedPeople, (e) => {
-		if(selectedPersonView != null && selectedPersonView.parentLines != undefined)
-			selectedPersonView.parentLines.forEach(line => line.style.backgroundColor = defaultLineColor);
+		if(selectedPerson != null)
+			applyToParentLines(selectedPerson, line => line.style.backgroundColor = defaultLineColor);
 		
-		if(e.person.view.parentLines != undefined) {
-			e.person.view.parentLines.forEach(line => line.style.backgroundColor = selectedLineColor);
-			selectedPersonView = e.person.view;
-		}
+		applyToParentLines(e.person, line => line.style.backgroundColor = selectedLineColor);
+		selectedPerson = e.person;
 		
 		let event = document.createEvent('Event');
 		event.person = e.person;
@@ -274,6 +1913,17 @@ function init() {
 	
 	createAllMerryLines(people, personWidth, personHeight, merrySymbolWidth, merrySymbolHeight, personBorder, tree);
 	createAllChildLines(people, personWidth, personHeight, personBorder, parentToChildLineHorisontalShift, lineStrength, tree);
+}
+
+function applyToParentLines(person, lineHandler) {
+	if(person == null || person == undefined || 
+	   person.view == null || person.view == undefined || 
+	   person.view.parentLines == null || person.view.parentLines == undefined)
+		return;
+	
+	person.view.parentLines.forEach(line => lineHandler(line));
+	applyToParentLines(person.parent1, lineHandler);
+	applyToParentLines(person.parent2, lineHandler);
 }
 
 function sortPeople(treeSizes) {
@@ -347,45 +1997,86 @@ function swapGroupsPositions(group1, group2) {
 }
 
 function sortGroup(group) {
-	for(let i = 0; i < group.length - 1; i++) {
-		for(let j = 0; j < group.length - 1; j++) {
-			let distanceCurrent = getAvgDistanceToParents(group[j]);
-			let distanceCurrentProbe = getAvgDistanceToParentsProbe(group[j], group[j + 1].leftPosition);
-			
-			let distanceOther = getAvgDistanceToParents(group[j + 1]);
-			let distanceOtherProbe = getAvgDistanceToParentsProbe(group[j + 1], group[j].leftPosition);
+	let change = true;
+	while(change) {
+		change = false;
+		for(let i = 0; i < group.length; i++) {
+			for(let j = i + 1; j < group.length; j++) {
+				let distanceCurrent = getAvgDistanceToParents(group[i]);
+				let distanceMerryCurrent = getSumDistanceToMerries(group[i]);
 				
-			if(distanceCurrentProbe + distanceOtherProbe < distanceCurrent + distanceOther) {
-				let temp = group[j];
-				let tempLeftPosition = group[j].leftPosition;
+				let distanceOther = getAvgDistanceToParents(group[j]);
+				let distanceMerryOther = getSumDistanceToMerries(group[j]);
 				
-				group[j].leftPosition = group[j + 1].leftPosition;
-				group[j] = group[j + 1];
+				
+				let temp = group[i];
+				let tempLeftPosition = group[i].leftPosition;
 					
-				group[j + 1].leftPosition = tempLeftPosition;
-				group[j + 1] = temp;
+				group[i].leftPosition = group[j].leftPosition;
+				group[i] = group[j];
+						
+				group[j].leftPosition = tempLeftPosition;
+				group[j] = temp;
+				
+				
+				let distanceCurrentProbe = getAvgDistanceToParents(group[i]);
+				let distanceMerryCurrentProbe = getSumDistanceToMerries(group[i]);
+				
+				let distanceOtherProbe = getAvgDistanceToParents(group[j]);
+				let distanceMerryOtherProbe = getSumDistanceToMerries(group[j]);
+				
+				let probeSum = distanceCurrentProbe + distanceMerryCurrentProbe + 
+							   distanceOtherProbe + distanceMerryOtherProbe;
+							   
+				let sum = distanceCurrent + distanceMerryCurrent + 
+						  distanceOther + distanceMerryOther;
+				
+				change = probeSum < sum;
+				
+				if(!change) {
+					temp = group[i];
+					tempLeftPosition = group[i].leftPosition;
+					
+					group[i].leftPosition = group[j].leftPosition;
+					group[i] = group[j];
+						
+					group[j].leftPosition = tempLeftPosition;
+					group[j] = temp;
+				}
 			}
 		}
 	}
 }
 
-function getAvgGroupDistanceToParentsProbe(group, probeShift) {
-	return group.reduce((acc, pers) => getAvgDistanceToParentsProbe(pers, pers.leftPosition + probeShift), 0) / group.length;
+function getDefinedParents(person) {
+	return [person.parent1, person.parent2].filter(parent => parent != null && parent != undefined);
 }
 
 function getAvgGroupDistanceToParents(group) {
-	return group.reduce((acc, pers) => acc + getAvgDistanceToParents(pers), 0) / group.length;
+	return group.reduce((acc, pers) => acc + getAvgDistanceToParents(pers), 0);
 }
 
 function getAvgDistanceToParentsProbe(person, probePosition) {
-	return person.parent1 == null || person.parent1 == undefined ||
-		   person.parent2 == null || person.parent2 == undefined ? 0 :
-		(Math.abs(person.parent1.leftPosition - probePosition) + 
-		 Math.abs(person.parent2.leftPosition - probePosition)) / 2;
+	let parents = getDefinedParents(person);
+	
+	if(parents.length == 0)
+		return 0;
+	
+	return parents.reduce((acc, parent) => acc + Math.abs(parent.leftPosition - probePosition), 0);
 }
 
 function getAvgDistanceToParents(person) {
 	return getAvgDistanceToParentsProbe(person, person.leftPosition);
+}
+
+function getSumDistanceToMerriesProbe(person, probePosition) {
+	return person.merries.reduce(
+		(acc, merry) => acc + (merry == null || merry.couple == null ? 0 : Math.abs(Math.abs(merry.couple.leftPosition - probePosition) - 1)), 0
+	);
+}
+
+function getSumDistanceToMerries(person) {
+	return getSumDistanceToMerriesProbe(person, person.leftPosition);
 }
 
 function getPersonChildrenCount(person) {
@@ -412,7 +2103,7 @@ function getPersonCoupleGroup(person, levelPeople) {
 	person.in_group = true;
 	
 	let brotherSisterCouple = levelPeople.filter(pers => !pers.in_group && hasCommonParent(person, pers));
-	let merryCouple = person.merries.filter(merry => merry != null && !merry.couple.in_group)
+	let merryCouple = person.merries.filter(merry => merry != null && merry.couple != null && !merry.couple.in_group)
 									.sort((merry, other) => other.children.length - merry.children.length - 1)
 									.map(merry => merry.couple);
 	
@@ -443,15 +2134,19 @@ function createAllChildLines(people, personWidth, personHeight, personBorder, pa
 			   person.merries[i].children_built || person.merries[i].children.length == 0)
 				continue;
 			
+			let parentViews = [person, person.merries[i].couple].filter(parent => parent != null && parent != undefined)
+																.map(parent => parent.view);
 			createChildLines(
-				[person.view, person.merries[i].couple.view], 
+				parentViews, 
 				person.merries[i].children.map(child => child.view), 
 				personWidth, personHeight, personBorder, 
 				parentToChildLineHorisontalShift, lineStrength, tree
 			);
 			
 			person.merries[i].children_built = true;
-			person.merries[i].couple.merries.find(m => m.id == person.merries[i].id).children_built = true;
+			
+			if(person.merries[i].couple != null)
+				person.merries[i].couple.merries.find(m => m.id == person.merries[i].id).children_built = true;
 		}
 	}
 }
@@ -459,7 +2154,10 @@ function createAllChildLines(people, personWidth, personHeight, personBorder, pa
 function createAllMerryLines(people, personWidth, personHeight, merrySymbolWidth, merrySymbolHeight, personBorder, tree) {
 	for(let person of people) {
 		for(let i = 0; i < person.merries.length; i++) {
-			if(person.merries[i] == null || person.merries[i] == undefined || person.merries[i].merry_built)
+			let displayMerryLine = person.merries[i] != null && person.merries[i] != undefined && person.merries[i].couple != null && 
+								   person.merries[i].fiktivnyj_brak == 0 && !person.merries[i].merry_built;
+								   
+			if(!displayMerryLine)
 				continue;
 			
 			createMerryLine(
@@ -497,7 +2195,7 @@ function locatePersonViews(treeSizes, viewClickHandler, buttonsClickHandler, par
 }
 
 function createChildLines(parents, children, personWidth, personHeight, personBorder, middleShift, lineStrength, tree) {
-	if(parents.length < 2 || children.length == 0)
+	if(parents.length == 0 || children.length == 0)
 		return;
 	
 	let lines = [];
@@ -516,7 +2214,7 @@ function createChildLines(parents, children, personWidth, personHeight, personBo
 	let tempMaxMiddle = Math.max(...tempParentMiddles);
 	let tempMiddleOfMiddle = tempMinMiddle + (tempMaxMiddle - tempMinMiddle) / 2;
 	
-	let parentMiddles = tempParentMiddles.map(middle => middle + (middle > tempMiddleOfMiddle ? -middleShift : middleShift));
+	let parentMiddles = tempParentMiddles.map(middle => middle + (middle >= tempMiddleOfMiddle ? -middleShift : middleShift));
 	let minMiddle = Math.min(...parentMiddles);
 	let maxMiddle = Math.max(...parentMiddles);
 	let middleOfMiddle = minMiddle + (maxMiddle - minMiddle) / 2;
@@ -548,11 +2246,7 @@ function createChildLines(parents, children, personWidth, personHeight, personBo
 		lines.push(createLine(childrenMiddleOfMiddle, relyBottom + hDistanceFourth * 3, childrenMiddleOfMiddle, relyBottom + hDistanceFourth * 2, "v-line", tree, "em"));
 	}
 	
-	children.forEach(child => 
-		child.parentLines = parents.reduce((acc, parent) => 
-			acc.concat(parent.parentLines == undefined ? [] : parent.parentLines), []
-		).concat(lines)
-	);
+	children.forEach(child => child.parentLines = lines);
 }
 
 function createMerryLine(from, to, personWidth, personHeight, symbolWidth, symbolHeight, isEx, middleShift, tree) {
@@ -628,6 +2322,9 @@ function markLevels(person, height, ignore) {
 	ignore.push(person);
 	person.height = height;
 	
+	markLevels(person.parent1, height - 1, ignore);
+	markLevels(person.parent2, height - 1, ignore);
+	
 	for(let merry of person.merries) {
 		if(merry == null)
 			continue;
@@ -668,6 +2365,33 @@ function createLineSeparator(parent) {
 	let separator = createElement("div", [ "horisontal-person-info-separator" ], null, null, null, cell);
 }
 
+function getAgeString(age) {
+	let mod = age % 10;
+	
+	if(mod == 1 && age != 11) return age + ' год';
+	else if(mod >= 2 && mod <= 4 && (age <= 4 || age > 14)) return age + ' года';
+	else return age + ' лет';
+}
+
+function getChristening(person) {
+	if(person.christening == null || person.christening == undefined)
+		return "Неизвестно, крещен" + (person.sex == "woman" ? "а" : "") + " ли";
+	
+	let christ = person.christening.indexOf("не") == -1;
+	return (christ ? "Крещен" : "НЕ крещен") + (person.sex == "woman" ? "а" : "");
+}
+
+function getSexString(sex) {
+	if(sex == "woman")
+		return "Женский";
+	else if(sex == "man")
+		return "Мужской";
+	else if(sex == null || sex == undefined)
+		return "Неизвестен";
+	else
+		return sex;
+}
+
 function createPersonView(person, buttonsClickHandler) {
 	
 	let tableWrapper = createElement("table", [ "person" ], "person_" + person.id, { cellpadding : 0, cellspacing : 0 }, null, null);
@@ -685,6 +2409,10 @@ function createPersonView(person, buttonsClickHandler) {
 	let personNamesCenter = createElement("center", [ "person-names" ], null, null, null, personNamesCell);
 	
 	createElement("div", [ "person-first-name" ], null, null, person.first_name + "\u00A0",  personNamesCenter);
+	
+	if(person.christening_name != null && person.christening_name != undefined)
+		createElement("div", [ "person-christening-name" ], null, null, "(" + person.christening_name + ")\u00A0",  personNamesCenter);
+	
 	createElement("div", [ "person-last-name" ], null, null, person.last_name, personNamesCenter);
 	
 	createLineSeparator(personInfoTable);
@@ -696,20 +2424,18 @@ function createPersonView(person, buttonsClickHandler) {
 	createElement("div", [ "person-birth-date" ], null, null, person.birth_date, personDatesCenter);
 	
 	if(person.death_date != null && person.death_date != undefined)
-		createElement("div", [ "person-death-date" ], null, null, ' — ' + person.death_date, personDatesCenter);	
+		createElement("div", [ "person-death-date" ], null, null, ' — ' + person.death_date, personDatesCenter);
+
+	createElement("div", [ "person-age" ], null, null, ' (' + getAgeString(parseInt(person.age)) + ')', personDatesCenter);	
 	
 	createLineSeparator(personInfoTable);
 	
-	let personBirthHistoryRow = createElement("tr", null, null, null, null, personInfoTable);
-	let personBirthHistoryCell = createElement("td", null, null, null, null, personBirthHistoryRow);
-	createElement("center", [ "birth-history" ], null, null, person.birth_history, personBirthHistoryCell);
+	let personAdditionalRow = createElement("tr", null, null, null, null, personInfoTable);
+	let personAdditionalCell = createElement("td", null, null, null, null, personAdditionalRow);
+	let personAdditionalCenter = createElement("center", null, null, null, null, personAdditionalCell);	
 	
-	if(person.death_date != null && person.death_date != undefined) {
-		createLineSeparator(personInfoTable);
-		let personDeathHistoryRow = createElement("tr", null, null, null, null, personInfoTable);
-		let personDeathHistoryCell = createElement("td", null, null, null, null, personDeathHistoryRow);
-		createElement("center", [ "death-history" ], null, null, person.death_history, personDeathHistoryCell);
-	}
+	createElement("div", [ "person-sex" ], null, null, "Пол: " + getSexString(person.sex), personAdditionalCenter);	
+	createElement("div", [ "person-christening" ], null, null, getChristening(person), personAdditionalCenter);	
 	
 	let personButtonsCell = createElement("td", null, null, null, null, tableWrapperRow);
 	let personButtonsTable = createElement("table", [ "person-buttons" ], null, { cellpadding : 0, cellspacing : 0 }, null, personButtonsCell);
