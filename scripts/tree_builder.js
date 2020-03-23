@@ -1844,15 +1844,15 @@ let ROOT_PERSON = person_14;
 
 }
 
-const horisontalSpace = 6;  //расстояние между людьми по горизонтали
+const horisontalSpace = 8;  //расстояние между людьми по горизонтали
 const verticalSpace = 6;     //расстояние между людьми по вертикали
 	
-const horisontalIndent = 12; //отступ дерева от левого края
+const horisontalIndent = 10; //отступ дерева от левого края
 const verticalIndent = 0;    //отступ дерева от верхнего края
 	
-const personHeight = 8;		 //высота болка человека (должна соответствовать .person.height в tree_styles.css!!! и сумме .person-photo.width + .person-info.width + .person-buttons.width + 1(for borders))
-const personWidth = 36;		 //ширина болка человека (должна соответствовать .person.width в tree_styles.css!!!)
-const personBorder = 0.2;	 //толщина границы блока человека
+const personHeight = 7;		 //высота болка человека (должна соответствовать .person.height в tree_styles.css!!! и сумме .person-photo.width + .person-info.width + .person-buttons.width + 1(for borders))
+const personWidth = 20;		 //ширина болка человека (должна соответствовать .person.width в tree_styles.css!!!)
+const personBorder = 0;//0.2	 //толщина границы блока человека
 	
 const merrySymbolWidth = 2;	 	  			//ширина символа брака(кольца)
 const merrySymbolHeight = 1.3333; 			//высота символа брака(кольца)
@@ -1869,7 +1869,8 @@ let personButtons = {
 	mainInfoButton : 0,
 	parentsButton : 1,
 	brothersSistersButton : 2,
-	merriesButton : 3
+	merriesButton : 3,
+	personPhoto : 4
 };
 
 function init() {
@@ -2415,12 +2416,15 @@ function getSexString(sex) {
 
 function createPersonView(person, buttonsClickHandler) {
 	
-	let tableWrapper = createElement("table", [ "person" ], "person_" + person.id, { cellpadding : 0, cellspacing : 0 }, null, null);
+	let tableWrapper = createElement("table", [ person.death_date != null && person.death_date != undefined ? "person-dead" : "person" ], "person_" + person.id, { cellpadding : 0, cellspacing : 0 }, null, null);
 	let tableWrapperRow = createElement("tr", null, null, null, null, tableWrapper);
 	
 	let personPhotoCell = createElement("td", null, null, null, null, tableWrapperRow);
 	let personPhotoUrl = person.photo_url == null || person.photo_url == undefined ? ('./imgs/default-' + person.sex + '.png') : person.photo_url;
 	let personPhoto = createElement("div", [ "person-photo" ], null, { style : "background-image : url(" + personPhotoUrl + ")" }, null, personPhotoCell);
+	
+	if(person.death_date != null && person.death_date != undefined)
+		createElement("div", [ "person-dead-photo" ], null, null, null, personPhotoCell);
 	
 	let personInfoCell = createElement("td", null, null, null, null, tableWrapperRow);
 	let personInfoTable = createElement("table", [ "person-info" ], null, { cellpadding : 0, cellspacing : 0 }, null, personInfoCell);
@@ -2480,6 +2484,8 @@ function createPersonView(person, buttonsClickHandler) {
 	parentsButton.onclick = () => buttonsClickHandler(personButtons.parentsButton);
 	brothersSistersButton.onclick = () => buttonsClickHandler(personButtons.brothersSistersButton);
 	merriesButton.onclick = () => buttonsClickHandler(personButtons.merriesButton);
+	
+	personPhoto.onclick = () => buttonsClickHandler(personButtons.personPhoto);
 	
 	person.view = tableWrapper;
 	return tableWrapper;

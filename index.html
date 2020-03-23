@@ -3,18 +3,47 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.67, minimum-scale=0.5">
 		<link rel="stylesheet" href="styles/common_styles.css"/>
 		<link rel="stylesheet" href="styles/info_styles.css"/>
 		<script src="lib/vue.js"></script>
+		
+		<script>
+		
+			const INFO_WIDTH_EXPANDED = "90vw";
+			const INFO_WIDTH = "17vw";
+			
+			const TREE_WIDTH_EXPANDED = "10vw";
+			const TREE_WIDTH = "80vw";
+			
+			const EXPANDER_BUTTON_LEFT_EXPANDED = "9vw";
+			const EXPANDER_BUTTON_LEFT = "79vw";
+		
+			let expanded = false;
+			
+			function expandInfoBlock() {
+				expanded = !expanded;
+				
+				let infoWrapper = document.getElementById("info-wrapper");
+				let treeWrapper = document.getElementById("tree-wrapper");
+				let expanderButton = document.getElementById("info-expand-button");
+				
+				infoWrapper.style.width = expanded ? INFO_WIDTH_EXPANDED : INFO_WIDTH;
+				treeWrapper.style.width = expanded ? TREE_WIDTH_EXPANDED : TREE_WIDTH;
+				expanderButton.style.left = expanded ? EXPANDER_BUTTON_LEFT_EXPANDED : EXPANDER_BUTTON_LEFT;
+			}
+		
+		</script>
 	</head>
 	
 	<body>
 		<table id="tree-info-wrapper" cellpadding="0" cellspacing="0">
 			<tr id="tree-info-row">
 			
-				<td class="tree-info-cell"><iframe id="tree-wrapper" src="tree.html" onload="initEventHandler()"></iframe></td>
-				<td class="tree-info-cell">
+				<td class="tree-cell"><iframe id="tree-wrapper" src="tree.html" onload="initEventHandler()"></iframe></td>
+				<td class="info-cell">
 					<div id="info-wrapper">
+						<div id="info-expand-button" onclick="expandInfoBlock();"></div>
 						<div class="person-names">
 							<div class="person-first-name">{{ first_name }}</div>
 							<div class="person-christening-name" v-if="christening_name != null && christening_name != undefined">{{ '(' + christening_name + ')' }}</div>
@@ -24,8 +53,18 @@
 						<div class="person-birth" v-if="birth_date != null && birth_date != undefined">
 							<div class="person-birth-date">{{ birth_date | birthString }}</div>
 							<div class="person-birth-country">{{ 'Страна рождения — ' + (country_birh == null || country_birh == undefined ? 'неизвестна' : country_birh) }}</div>
-							<div class="person-sex">{{ sex | sexString }}</div>
-							<div class="person-christening">{{ christening | christeningString }}</div>
+							<table>
+								<tr>
+									<td><div class="person-sex">{{ sex | sexString }}</div></td>
+									<td><div class="{{ sex == 'man' ? 'person-man-icon' : 'person-woman-icon' }}"></div></td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<td><div class="person-christening">{{ christening | christeningString }}</div></td>
+									<td><div v-if="christening == 'крещен'" class="person-christening-icon"></div></td>
+								</tr>
+							</table>
 							<div class="person-birth-history" v-if="birth_history != null && birth_history != undefined" v-html="birth_history"></div>
 						</div>
 						<div class="person-death" v-if="death_date != null && death_date != undefined">
@@ -136,6 +175,14 @@
 		</table>
 		
 		<!--Всплывающее сообщения-->
+		
+		<div id="person-photo-popup" class="popup-wrapper" hidden>
+			<center style="height: 100%;">
+				<table style="height: 100%;">
+					<tr><td valign="center"><img class="popup-photo" v-bind:src="photo_url | personPhotoUrlFilter"></img></td></tr>
+				</table>
+			</center>
+		</div>
 		
 		<div id="person-main-info-popup" class="popup-wrapper" hidden>
 			<div class="popup-body">

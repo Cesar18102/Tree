@@ -22,6 +22,9 @@ function initEventHandler() {
 			case e.personButtons.merriesButton :
 				document.getElementById("person-merries-popup").hidden = false;
 				break;
+			case e.personButtons.personPhoto : 
+				document.getElementById("person-photo-popup").hidden = false;
+				break;
 		}
 	}, false);
 }
@@ -208,6 +211,13 @@ function initDataBinding() {
 			   (this.attitude_to_me_from_parent_2 == null || this.attitude_to_me_from_parent_2 == undefined ? "неизвестно" : this.attitude_to_me_from_parent_2);
 	});
 	
+	Vue.filter('personPhotoUrlFilter', function (photo_url) {
+		if(photo_url != null && photo_url != undefined)
+			return photo_url;
+		
+		return './imgs/default-' + this.sex + '.png';
+	});
+	
 	new Vue({
 		el : "#info-wrapper",
 		data : personDataBindingObject
@@ -220,7 +230,8 @@ initDataBinding();
  "person-main-info-popup",
  "person-parents-popup",
  "person-sisters-brothers-popup",
- "person-merries-popup"
+ "person-merries-popup",
+ "person-photo-popup"
 ].map(id => document.getElementById(id))
  .forEach(popupWrapper => {
 	 popupWrapper.onclick = () => popupWrapper.hidden = true;
@@ -231,6 +242,12 @@ initDataBinding();
  });
 
 Array.from(document.getElementsByClassName("popup-body"))
+	 .forEach(popupBody => popupBody.onclick = (e) => {
+		 e.stopPropagation();
+		 return true;
+	 });
+	 
+Array.from(document.getElementsByClassName("popup-photo"))
 	 .forEach(popupBody => popupBody.onclick = (e) => {
 		 e.stopPropagation();
 		 return true;

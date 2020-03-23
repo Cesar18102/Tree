@@ -1,4 +1,4 @@
-body { overflow : hidden }
+body { overflow : hidden; }
 
 html, body, #tree-info-wrapper, #tree-info-row {
 	margin : 0;
@@ -8,7 +8,8 @@ html, body, #tree-info-wrapper, #tree-info-row {
 	height : 100%;
 }
 
-.tree-info-cell {
+.tree-cell, .info-cell {
+	overflow-y : scroll;
 	height : 100%;
 }
 
@@ -19,14 +20,40 @@ html, body, #tree-info-wrapper, #tree-info-row {
 #tree-wrapper {
 	width : 80vw;
 	border : 0;
+	transition: width 0.5s;
 }
 
 #info-wrapper {
-	width : 20vw;
+	width : 17vw;
 	padding : 1vw;
-	overflow : scroll;
+	overflow-y : scroll;
 	border-left : 0.2em solid #A0A0A0;
 	background-color : #EEEEEE;
+	transition: width 0.5s;
+}
+
+#info-expand-button {
+	top : 47.5vh;
+	left : 79vw;
+	
+	width : 3vw;
+	height : 3vw;
+	
+	position : fixed;
+	transition: left 0.5s;
+	
+	border-radius : 1.5vw;
+	background-color: #FFFFFF;
+	border : 0.2em solid #A0A0A0;
+	
+	background-size : cover;
+	background-position : center;
+	background-repeat : no-repeat;
+	background-image : url(../imgs/expand.png);
+}
+
+#info-expand-button:hover {
+	background-color: #EEEEEE;
 }
 
 .popup-wrapper {
@@ -52,6 +79,11 @@ html, body, #tree-info-wrapper, #tree-info-row {
 	border : 0.2vh solid #A0A0A0;
 	border-radius : 2vh;
 	background-color : #EEEEEE;
+}
+
+.popup-photo {
+	width : auto;
+	vertical-align : middle;
 }
 
 .popup-info-wrapper {

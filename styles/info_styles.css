@@ -2,6 +2,30 @@
 
 }
 
+.person-man-icon, .person-woman-icon, .person-christening-icon {
+	width : 1.9vh;
+	height : 2vh;
+	
+	background-size : cover;
+	background-position : center;
+	background-repeat : no-repeat;
+}
+
+.person-man-icon {
+	background-image : url(../imgs/man.png);
+}
+
+.person-woman-icon {
+	background-image : url(../imgs/woman.png);
+}
+
+.person-christening-icon {
+	width : 1.5vh;
+	height : 2vh;
+	
+	background-image : url(../imgs/krest.png);
+}
+
 .person-first-name, .person-last-name, .person-christening-name, .person-age {
 	display : inline;
 	
