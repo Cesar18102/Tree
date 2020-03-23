@@ -10,14 +10,14 @@
 		
 		<script>
 		
-			const INFO_WIDTH_EXPANDED = "90vw";
-			const INFO_WIDTH = "17vw";
+			const INFO_WIDTH_EXPANDED = "89vw";
+			const INFO_WIDTH = "19vw";
 			
-			const TREE_WIDTH_EXPANDED = "10vw";
-			const TREE_WIDTH = "80vw";
+			const TREE_WIDTH_EXPANDED = "9vw";
+			const TREE_WIDTH = "79vw";
 			
-			const EXPANDER_BUTTON_LEFT_EXPANDED = "9vw";
-			const EXPANDER_BUTTON_LEFT = "79vw";
+			const EXPANDER_BUTTON_LEFT_EXPANDED = "7vw";
+			const EXPANDER_BUTTON_LEFT = "77vw";
 		
 			let expanded = false;
 			
@@ -246,8 +246,8 @@
 					<div class="merries-wrapper">
 						<div class="merries-static-text" v-if="merries | normalMerries">История браков: </div>
 						<ul v-for="merry of merries" class="person-merries">
-							<li style="margin-left : 15em;" v-if="merry != null && merry != undefined && merry.fiktivnyj_brak == 0" class="{{ merry | merryClass merries }}">
-								<div style="margin-left : -15em;">
+							<li v-if="merry != null && merry != undefined && merry.fiktivnyj_brak == 0" class="{{ merry | merryClass merries }}">
+								<div>
 									<div class="person-couple">{{ merry?.couple?.first_name + ' ' + (merry?.couple?.last_name == null ? '' : merry?.couple?.last_name) }}</div>
 									<div class="merry-divorce-dates">
 										{{ '(' + merry?.merry_date + (merry?.divorce_date == null || merry?.divorce_date == undefined ? '' : ' — ' + merry?.divorce_date) + ')' }}
@@ -256,8 +256,8 @@
 									<div v-if="merry != null && merry.children.length != 0" class="person-children-wrapper">
 										<div class="person-children-static-text">Общие дети: </div>
 										<ul v-for="child in merry.children" class="person-children-list">
-											<li style="margin-left : 10em;" class="person-children-list-item">
-												<span style="margin-left : -10em;">{{ child.first_name + ' ' + (child.last_name == null ? '' : child.last_name) }}</span>
+											<li class="person-children-list-item">
+												<span>{{ child.first_name + ' ' + (child.last_name == null ? '' : child.last_name) }}</span>
 											</li>
 										</ul>
 									</div>

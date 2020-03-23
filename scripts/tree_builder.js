@@ -5,7 +5,7 @@ let person_22 = {
 	 christening_name : `Григорий`,             //имярек
 	 last_name : null,                    //фамилия
 	 birth_date : `10.10.1936`,                   //дата рождения
-	 death_date : `31.12.9999`,                   //дата смерти
+	 death_date : null,                   //дата смерти
 	 age : `83`,                          //возраст
 	 birth_history : null,                //история рождения
 	 death_history : null,                //история смерти
@@ -458,8 +458,8 @@ let person_18 = {
 	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
 	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
 	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
-	 photo_url : null,
-	 sex : `man`,
+	 photo_url : `http://v1.popcornnews.ru/k2/news/970/upload/news/637056676986.jpg`,
+	 sex : `woman`,
 	 parent1 : null,
 	 parent2 : null,
 	 merries : []
@@ -536,7 +536,7 @@ let person_20 = {
 	 attitude_to_parent_2 : null,         //описание взаимоотношений данной персоны к матери 
 	 attitude_to_me_from_parent_1 : null, //описание взаимоотношений отца к данной персоне 
 	 attitude_to_me_from_parent_2 : null, //описание взаимоотношений матери к данной персоне 
-	 photo_url : null,
+	 photo_url : `https://s13.stc.all.kpcdn.net/share/i/4/1747856/inx960x1240.jpg`,
 	 sex : `man`,
 	 parent1 : null,
 	 parent2 : null,
@@ -659,6 +659,8 @@ let person_16 = {
 	 parent2 : null,
 	 merries : []
 };
+
+ 
  
 
 let person_13 = {
@@ -1048,7 +1050,15 @@ let person_14 = {
 	 merries : []
 };
 
+ 
+ 
+
+
+
 let ROOT_PERSON = person_14;
+
+
+
 
  
  function parent() {
@@ -1136,6 +1146,7 @@ let ROOT_PERSON = person_14;
   	 person_16.parent1 = person_15;
 
   	 person_16.parent2 = person_13;
+
 
 
   	 person_23.parent1 = person_21;
@@ -1251,7 +1262,6 @@ let ROOT_PERSON = person_14;
  	 	 person_7,
 
  	 	 person_16,
-		 
 
  	 	 person_23,
 
@@ -1284,6 +1294,16 @@ let ROOT_PERSON = person_14;
  	 	 return people;
 
  }
+
+
+
+
+
+ function init() {
+
+}
+
+
 
 
 
@@ -1500,7 +1520,7 @@ let ROOT_PERSON = person_14;
 
  	 	 {
 
-  	 	 id : -2601753,
+  	 	 id : -176060,
 
   	 	 couple : null,
 
@@ -1543,8 +1563,7 @@ let ROOT_PERSON = person_14;
 
  	 	 	 person_8,
 
- 	 	 	 person_16,
-			 
+ 	 	 	 person_16
 
  	 	 	 ]
 
@@ -1629,8 +1648,7 @@ let ROOT_PERSON = person_14;
 
  	 	 	 person_8,
 
- 	 	 	 person_16,
-			 
+ 	 	 	 person_16
 
  	 	 	 ]
 
@@ -1746,7 +1764,7 @@ let ROOT_PERSON = person_14;
 
  	 	 {
 
-  	 	 id : -2601753,
+  	 	 id : -176060,
 
   	 	 couple : person_14,
 
@@ -1771,7 +1789,7 @@ let ROOT_PERSON = person_14;
 
  	 	 {
 
-  	 	 id : -2601753,
+  	 	 id : -176060,
 
   	 	 couple : person_24,
 
@@ -1796,7 +1814,7 @@ let ROOT_PERSON = person_14;
 
  	 	 {
 
-  	 	 id : -2601753,
+  	 	 id : -176060,
 
   	 	 couple : person_27,
 
@@ -1821,7 +1839,7 @@ let ROOT_PERSON = person_14;
 
  	 	 {
 
-  	 	 id : -2601753,
+  	 	 id : -176060,
 
   	 	 couple : person_26,
 

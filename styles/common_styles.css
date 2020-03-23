@@ -9,7 +9,6 @@ html, body, #tree-info-wrapper, #tree-info-row {
 }
 
 .tree-cell, .info-cell {
-	overflow-y : scroll;
 	height : 100%;
 }
 
@@ -18,13 +17,14 @@ html, body, #tree-info-wrapper, #tree-info-row {
 }
 
 #tree-wrapper {
-	width : 80vw;
+	width : 79vw;
 	border : 0;
+	overflow-y : scroll;
 	transition: width 0.5s;
 }
 
 #info-wrapper {
-	width : 17vw;
+	width : 19vw;
 	padding : 1vw;
 	overflow-y : scroll;
 	border-left : 0.2em solid #A0A0A0;
@@ -34,7 +34,7 @@ html, body, #tree-info-wrapper, #tree-info-row {
 
 #info-expand-button {
 	top : 47.5vh;
-	left : 79vw;
+	left : 77vw;
 	
 	width : 3vw;
 	height : 3vw;
