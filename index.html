@@ -17,35 +17,46 @@
 					<div id="info-wrapper">
 						<div class="person-names">
 							<div class="person-first-name">{{ first_name }}</div>
+							<div class="person-christening-name" v-if="christening_name != null && christening_name != undefined">{{ '(' + christening_name + ')' }}</div>
 							<div class="person-last-name">{{ last_name }}</div>
+							<div class="person-age" v-if="age != null && age != undefined">{{ age | ageString }}</div>
 						</div>
-						<div class="person-birth">
-							<div class="person-birth-date">{{ birth_date == null || birth_date == undefined ? '' : ('Род. ' + birth_date) }}</div>
-							<div class="person-birth-history">{{ birth_history }}</div>
+						<div class="person-birth" v-if="birth_date != null && birth_date != undefined">
+							<div class="person-birth-date">{{ birth_date | birthString }}</div>
+							<div class="person-birth-country">{{ 'Страна рождения — ' + (country_birh == null || country_birh == undefined ? 'неизвестна' : country_birh) }}</div>
+							<div class="person-sex">{{ sex | sexString }}</div>
+							<div class="person-christening">{{ christening | christeningString }}</div>
+							<div class="person-birth-history" v-if="birth_history != null && birth_history != undefined" v-html="birth_history"></div>
 						</div>
-						<div class="{{ death_date == null || death_date == undefined ? 'no-display' : 'person-death' }}">
-							<div class="person-death-date">{{ death_date == null || death_date == undefined ? '' : ('Ум. ' + death_date) }}</div>
-							<div class="{{ death_history == null || death_history == undefined ? 'no-display' : 'person-death-history' }}">{{ death_history }}</div>
+						<div class="person-death" v-if="death_date != null && death_date != undefined">
+							<div class="person-death-date">{{ death_date | deathString }}</div>
+							<div class="person-death-cause" v-if="death_cause != null && death_cause != undefined">{{ 'Причина смерти: ' + death_cause }}</div>
+							<div class="person-death-history" v-if="death_history != null && death_history != undefined" v-html="death_history"></div>
 						</div>
 						
 						<div id="parents-wrapper" hidden>
 							<div class="person-parents-static-text">Родители:</div>
-							<div class="person-father"> {{ 'Отец: ' | father parent1 parent2 }}</div>
-							<div class="person-mother"> {{ 'Мать: ' | mother parent1 parent2 }}</div>
+							<div class="person-father"> {{ parent1 | parentOneFilter }}</div>
+							<div class="person-father"> {{ parent1 | attitudeToParentOne }}</div>
+							<div class="person-father"> {{ parent1 | attitudeFromParentOne }}</div>
+							<br/>
+							<div class="person-mother"> {{ parent2 | parentTwoFilter }}</div>
+							<div class="person-father"> {{ parent1 | attitudeToParentTwo }}</div>
+							<div class="person-father"> {{ parent2 | attitudeFromParentTwo }}</div>
 						</div>
 						
-						<div v-if="parent1 != null" class="brothers-sisters-wrapper">
+						<div v-if="parent1 | brotherSisterCount" class="brothers-sisters-wrapper">
 							<div class="person-brothers-sisters-static-text">Родные братья и сестры: </div>
 							<ul class="person-brothers-sisters-list" v-for="brotherOrSister of parent1 | brotherSister">
-								<li class="person-brothers-sisters-list-item">{{ brotherOrSister.first_name + ' ' + brotherOrSister.last_name }}</li>
+								<li class="person-brothers-sisters-list-item">{{ brotherOrSister.first_name + ' ' + (brotherOrSister.last_name == null ? '' : brotherOrSister.last_name) }}</li>
 							</ul>
 						</div>
 						 
 						<div class="merries-wrapper">
-							<div class="merries-static-text"> {{ merries.length > 0 ? 'История браков: ' : '' }}</div>
+							<div class="merries-static-text" v-if="merries | normalMerries">История браков: </div>
 							<ul v-for="merry of merries" class="person-merries">
-								<li class="{{ merry == null || merry == undefined ? 'no-display' : (merry == merries[merries.length - 1] ? 'person-merry' : 'person-ex-merry') }}">
-									<div class="person-couple">{{ merry?.couple?.first_name + ' ' + merry?.couple?.last_name }}</div>
+								<li v-if="merry != null && merry != undefined && merry.fiktivnyj_brak == 0" class="{{ merry | merryClass merries }}">
+									<div class="person-couple">{{ merry?.couple?.first_name + ' ' + (merry?.couple?.last_name == null ? '' : merry?.couple?.last_name) }}</div>
 									<div class="merry-divorce-dates">
 										{{ '(' + merry?.merry_date + (merry?.divorce_date == null || merry?.divorce_date == undefined ? '' : ' — ' + merry?.divorce_date) + ')' }}
 									</div>
@@ -53,13 +64,71 @@
 									<div v-if="merry != null && merry.children.length != 0" class="person-children-wrapper">
 										<div class="person-children-static-text">Общие дети: </div>
 										<ul v-for="child in merry.children" class="person-children-list">
-											<li class="person-children-list-item">{{ child.first_name + ' ' + child.last_name }}</li>
+											<li class="person-children-list-item">{{ child.first_name + ' ' + (child.last_name == null ? '' : child.last_name) }}</li>
 										</ul>
 									</div>
 									
 								</li>
 							</ul>
 						</div>
+						
+						<div class="person-data-wrapper" v-if="relocation != null && relocation != undefined">
+							<div class="person-data-title">Места жительства</div>
+							<div class="person-data" v-html="relocation"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="positions_held != null && positions_held != undefined">
+							<div class="person-data-title">История трудовой деятельности</div>
+							<div class="person-data" v-html="positions_held"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="accidents != null && accidents != undefined">
+							<div class="person-data-title">История несчастных случаев: </div>
+							<div class="person-data" v-html="accidents"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="chronica_ilments != null && chronica_ilments != undefined">
+							<div class="person-data-title">Перечень хронических заболеваний: </div>
+							<div class="person-data" v-html="chronica_ilments"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="character_traits != null && character_traits != undefined">
+							<div class="person-data-title">Черты характера: </div>
+							<div class="person-data" v-html="character_traits"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="vices != null && vices != undefined">
+							<div class="person-data-title">Пагубные привычки, зависимости : </div>
+							<div class="person-data" v-html="vices"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="sin != null && sin != undefined">
+							<div class="person-data-title">Судимости, преступления: </div>
+							<div class="person-data" v-html="sin"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="person_marks != null && person_marks != undefined">
+							<div class="person-data-title">Особые отметки на человеке: </div>
+							<div class="person-data" v-html="person_marks"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="ability != null && ability != undefined">
+							<div class="person-data-title">Таланты: </div>
+							<div class="person-data" v-html="ability"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="common != null && common != undefined">
+							<div class="person-data-title">Дополнительная информация: </div>
+							<div class="person-data" v-html="common"></div>
+						</div>
+						
+						<div class="special-dates-wrapper" v-if="specials != null && specials != undefined && specials.length > 0">
+							<div class="special-dates-static-text">Особые события: </div>
+							<div class="special-dates" v-for="evt of specials">
+								{{ evt.date + ': ' + evt.description }}
+							</div>
+						</div>
+						
 					</div>
 				</td>
 				
@@ -71,21 +140,26 @@
 		<div id="person-main-info-popup" class="popup-wrapper" hidden>
 			<div class="popup-body">
 				<center class="popup-info-wrapper">
+				
 					<div class="main-info-static-text">Общая информация: </div>
-					<center class="popup-info">
-						<div class="person-names">
-							<div class="person-first-name">{{ first_name }}</div>
-							<div class="person-last-name">{{ last_name }}</div>
-						</div>
-						<div class="person-birth">
-							<div class="person-birth-date">{{ birth_date == null || birth_date == undefined ? '' : ('Род. ' + birth_date) }}</div>
-							<div class="person-birth-history">{{ birth_history }}</div>
-						</div>
-						<div class="{{ death_date == null || death_date == undefined ? 'no-display' : 'person-death' }}">
-							<div class="person-death-date">{{ death_date == null || death_date == undefined ? '' : ('Ум. ' + death_date) }}</div>
-							<div class="{{ death_history == null || death_history == undefined ? 'no-display' : 'person-death-history' }}">{{ death_history }}</div>
-						</div>
-					</center>
+					<br/>
+					<div class="person-names">
+						<div class="person-first-name">{{ first_name }}</div>
+						<div class="person-christening-name" v-if="christening_name != null && christening_name != undefined">{{ '(' + christening_name + ')' }}</div>
+						<div class="person-last-name">{{ last_name }}</div>
+						<div class="person-age" v-if="age != null && age != undefined">{{ age | ageString }}</div>
+					</div>
+					<div class="person-birth" v-if="birth_date != null && birth_date != undefined">
+						<div class="person-birth-date">{{ birth_date | birthString }}</div>
+						<div class="person-birth-country">{{ 'Страна рождения — ' + (country_birh == null || country_birh == undefined ? 'неизвестна' : country_birh) }}</div>
+						<div class="person-sex">{{ sex | sexString }}</div>
+						<div class="person-christening">{{ christening | christeningString }}</div>
+					</div>
+					<div class="person-death" v-if="death_date != null && death_date != undefined">
+						<div class="person-death-date">{{ death_date | deathString }}</div>
+						<div class="person-death-cause" v-if="death_cause != null && death_cause != undefined">{{ 'Причина смерти: ' + death_cause }}</div>
+					</div>
+					
 				</center>
 			</div>
 		</div>
@@ -93,13 +167,18 @@
 		<div id="person-parents-popup" class="popup-wrapper" hidden>
 			<div class="popup-body">
 				<center class="popup-info-wrapper">
+				
 					<div>
-						<div class="person-parents-static-text">Родители: </div>
-						<center class="popup-info">
-							<div class="person-father"> {{ 'Отец: ' | father parent1 parent2 }}</div>
-							<div class="person-mother"> {{ 'Мать: ' | mother parent1 parent2 }}</div>
-						</center>
+						<div class="person-parents-static-text">Родители:</div>
+						<div class="person-father"> {{ parent1 | parentOneFilter }}</div>
+						<div class="person-father"> {{ parent1 | attitudeToParentOne }}</div>
+						<div class="person-father"> {{ parent1 | attitudeFromParentOne }}</div>
+						<br/>
+						<div class="person-mother"> {{ parent2 | parentTwoFilter }}</div>
+						<div class="person-father"> {{ parent1 | attitudeToParentTwo }}</div>
+						<div class="person-father"> {{ parent2 | attitudeFromParentTwo }}</div>
 					</div>
+					
 				</center>
 			</div>
 		</div>
@@ -107,14 +186,39 @@
 		<div id="person-sisters-brothers-popup" class="popup-wrapper" hidden>
 			<div class="popup-body">
 				<center class="popup-info-wrapper">
-					<div class="brothers-sisters-wrapper">
+				
+					<div v-if="parent1 | brotherSisterCount" class="brothers-sisters-wrapper">
 						<div class="person-brothers-sisters-static-text">Родные братья и сестры: </div>
-						<center v-if="parent1 != null" class="popup-info">
-							<ul class="person-brothers-sisters-list" v-for="brotherOrSister of parent1 | brotherSister">
-								<li class="person-brothers-sisters-list-item">{{ brotherOrSister.first_name + ' ' + brotherOrSister.last_name }}</li>
-							</ul>
-						</center>
+						<ul class="person-brothers-sisters-list" v-for="brotherOrSister of parent1 | brotherSister">
+							<li style="margin-left : 8em;" class="person-brothers-sisters-list-item">
+								<span style="margin-left : -8em;">{{ brotherOrSister.first_name + ' ' + (brotherOrSister.last_name == null ? '' : brotherOrSister.last_name) }}</span>
+							</li>
+						</ul>
 					</div>
+						 
+					<div class="merries-wrapper">
+						<div class="merries-static-text" v-if="merries | normalMerries">История браков: </div>
+						<ul v-for="merry of merries" class="person-merries">
+							<li style="margin-left : 15em;" v-if="merry != null && merry != undefined && merry.fiktivnyj_brak == 0" class="{{ merry | merryClass merries }}">
+								<div style="margin-left : -15em;">
+									<div class="person-couple">{{ merry?.couple?.first_name + ' ' + (merry?.couple?.last_name == null ? '' : merry?.couple?.last_name) }}</div>
+									<div class="merry-divorce-dates">
+										{{ '(' + merry?.merry_date + (merry?.divorce_date == null || merry?.divorce_date == undefined ? '' : ' — ' + merry?.divorce_date) + ')' }}
+									</div>
+										
+									<div v-if="merry != null && merry.children.length != 0" class="person-children-wrapper">
+										<div class="person-children-static-text">Общие дети: </div>
+										<ul v-for="child in merry.children" class="person-children-list">
+											<li style="margin-left : 10em;" class="person-children-list-item">
+												<span style="margin-left : -10em;">{{ child.first_name + ' ' + (child.last_name == null ? '' : child.last_name) }}</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
 				</center>
 			</div>
 		</div>
@@ -122,27 +226,64 @@
 		<div id="person-merries-popup" class="popup-wrapper" hidden>
 			<div class="popup-body">
 				<center class="popup-info-wrapper">
-					<div class="merries-wrapper">
-						<div class="merries-static-text">История браков: </div>
-						<center class="popup-info">
-							<ul v-for="merry of merries" class="person-merries">
-								<li class="{{ merry == null || merry == undefined ? 'no-display' : (merry == merries[merries.length - 1] ? 'person-merry' : 'person-ex-merry') }}">
-									<div class="person-couple">{{ merry?.couple?.first_name + ' ' + merry?.couple?.last_name }}</div>
-									<div class="merry-divorce-dates">
-										{{ '(' + merry?.merry_date + (merry?.divorce_date == null || merry?.divorce_date == undefined ? '' : ' — ' + merry?.divorce_date) + ')' }}
-									</div>
-									
-									<div v-if="merry != null && merry.children.length != 0" class="person-children-wrapper">
-										<div class="person-children-static-text">Общие дети: </div>
-										<ul v-for="child in merry.children" class="person-children-list">
-											<li class="person-children-list-item">{{ child.first_name + ' ' + child.last_name }}</li>
-										</ul>
-									</div>
-									
-								</li>
-							</ul>
-						</center>
-					</div>
+					
+					<div class="person-data-wrapper" v-if="relocation != null && relocation != undefined">
+							<div class="person-data-title">Места жительства</div>
+							<div class="person-data" v-html="relocation"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="positions_held != null && positions_held != undefined">
+							<div class="person-data-title">История трудовой деятельности</div>
+							<div class="person-data" v-html="positions_held"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="accidents != null && accidents != undefined">
+							<div class="person-data-title">История несчастных случаев: </div>
+							<div class="person-data" v-html="accidents"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="chronica_ilments != null && chronica_ilments != undefined">
+							<div class="person-data-title">Перечень хронических заболеваний: </div>
+							<div class="person-data" v-html="chronica_ilments"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="character_traits != null && character_traits != undefined">
+							<div class="person-data-title">Черты характера: </div>
+							<div class="person-data" v-html="character_traits"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="vices != null && vices != undefined">
+							<div class="person-data-title">Пагубные привычки, зависимости : </div>
+							<div class="person-data" v-html="vices"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="sin != null && sin != undefined">
+							<div class="person-data-title">Судимости, преступления: </div>
+							<div class="person-data" v-html="sin"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="person_marks != null && person_marks != undefined">
+							<div class="person-data-title">Особые отметки на человеке: </div>
+							<div class="person-data" v-html="person_marks"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="ability != null && ability != undefined">
+							<div class="person-data-title">Таланты: </div>
+							<div class="person-data" v-html="ability"></div>
+						</div>
+						
+						<div class="person-data-wrapper" v-if="common != null && common != undefined">
+							<div class="person-data-title">Дополнительная информация: </div>
+							<div class="person-data" v-html="common"></div>
+						</div>
+						
+						<div class="special-dates-wrapper" v-if="specials != null && specials != undefined && specials.length > 0">
+							<div class="special-dates-static-text">Особые события: </div>
+							<div class="special-dates" v-for="evt of specials">
+								{{ evt.date + ': ' + evt.description }}
+							</div>
+						</div>
+					
 				</center>
 			</div>
 		</div>

@@ -2,21 +2,25 @@
 
 }
 
-.person-first-name, .person-last-name {
+.person-first-name, .person-last-name, .person-christening-name, .person-age {
 	display : inline;
 	
 	font-size : 2em;
+}
+
+.person-christening-name {
+	font-style : italic;
 }
 
 .person-last-name {
 	text-transform : uppercase;
 }
 
-.person-birth, .person-death, #parents-wrapper, .merries-wrapper, .brothers-sisters-wrapper, .person-children-wrapper {
+.person-birth, .person-death, #parents-wrapper, .merries-wrapper, .brothers-sisters-wrapper, .person-children-wrapper, .person-data-wrapper, .special-dates-wrapper {
 	margin-top : 1em;
 }
 
-.person-birth-date, .person-death-date {
+.person-birth-date, .person-birth-country, .person-sex, .person-death-date, .person-death-cause, .person-christening, .person-data, .special-dates {
 	font-size : 1.7em;
 	font-style : italic;
 }
@@ -29,8 +33,8 @@
 	font-size : 1.5em;
 }
 
-.merries-static-text, .person-parents-static-text, .person-brothers-sisters-static-text, .main-info-static-text {
-	font-size : 1.7em;
+.merries-static-text, .person-parents-static-text, .person-brothers-sisters-static-text, .main-info-static-text, .person-data-title, .special-dates-static-text {
+	font-size : 2em;
 	font-style : italic;
 	text-decoration : underline;
 }
@@ -62,20 +66,20 @@
 
 .person-father, .person-mother {
 	text-indent : 1.5em;
-	font-size : 1.3em;
+	font-size : 1.7em;
+}
+
+.person-brothers-sisters-list-item {
+	font-size : 1.7em;
 }
 
 .person-children-static-text {
-	font-size : 1.3em;
+	font-size : 1.6em;
 	font-style : italic;
 	text-decoration : underline;
 }
 
-.person-brothers-sisters-list-item {
-	font-size : 1.2em;
-}
-
 .person-children-list-item {
-	font-size : 1.3em;
+	font-size : 1.5em;
 	list-style : disc;
 }
